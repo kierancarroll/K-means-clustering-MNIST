@@ -43,10 +43,12 @@ two steps that each decrease $J$ and never increase it. The assignment step
 holds the centroids fixed and assigns every point to its nearest one; the update
 step holds the assignments fixed and moves every centroid to the mean of its
 members:
+
 $$
 z_i = argmin_k \| x_i − c_k \|_2^2 \\
 c_k = mean{x_i:z_i = k}
 $$
+
 **Convergence** is exact: the loop runs until the assignment vector $z$ is identical to that of the previous iteration. Since the number of possible partitions is finite and $J$ strictly decreases whenever an assignment changes, this always terminates at a local minimum, not necessarily the global one.
 
 ## Results
